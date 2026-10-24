@@ -24,7 +24,24 @@ namespace RestarantApp
 
         public Restaurant(int id,string name,string type,double rate)
         {
-            
+            Id = id;
+            Name = name;
+            Type = type;
+            Rate = rate;
+        }
+
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                List<Restaurant> restaurants = new List<Restaurant>
+        {
+            new Restaurant(1, "Quanjude Roast Duck", "Beijing Cuisine", 4.5),
+            new Restaurant(2, "Donglaishun Hot Pot", "Hot Pot", 4.6),
+            new Restaurant(3, "Din Tai Fung", "Taiwanese Cuisine", 4.7)
+         };
+            }
         }
     }
 }
+
