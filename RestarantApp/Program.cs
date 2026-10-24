@@ -12,6 +12,7 @@ namespace RestarantApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello TIT.1/2");
         }
     }
     public class Restaurant
