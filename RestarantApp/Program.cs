@@ -27,7 +27,6 @@ namespace RestaurantApp
             double averageRate = restaurants.Average(item => item.Rate);
             Console.WriteLine($"Average rating: {averageRate:F2}");
             Console.WriteLine("samutprakan");
-            4555
         }
     }
     public class Restaurant
