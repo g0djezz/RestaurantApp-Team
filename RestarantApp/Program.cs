@@ -33,6 +33,8 @@ namespace RestaurantApp
 
             Console.WriteLine("Jessada");
 
+            Console.WriteLine("Jessada,Chanachai,Nattawut");
+            Console.WriteLine("Boss");
         }
     }
     public class Restaurant
