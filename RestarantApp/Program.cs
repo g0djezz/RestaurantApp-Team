@@ -32,8 +32,49 @@ namespace RestaurantApp
             Console.WriteLine("Winner");
 
             Console.WriteLine("Jessada");
+            // Menu 5: Add New Restaurant
+            Console.WriteLine("\n===== Menu 5: Add Restaurant =====");
 
-            Console.WriteLine("Jessada,Chanachai,Nattawut");
+            Console.Write("Enter restaurant name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter restaurant type: ");
+            string type = Console.ReadLine();
+
+            Console.Write("Enter restaurant rating (0-5): ");
+            string input = Console.ReadLine();
+
+            double rate;
+
+            // Check rating
+            if (double.TryParse(input, out rate) && rate >= 0 && rate <= 5)
+            {
+                int newId = restaurants.Max(r => r.Id) + 1;
+
+                Restaurant newRestaurant = new Restaurant(
+                    newId, name, type, rate
+                );
+
+                restaurants.Add(newRestaurant);
+
+                Console.WriteLine("\nRestaurant added successfully!");
+            }
+            else
+            {
+                Console.WriteLine("\nInvalid rating! Please enter 0-5.");
+            }
+
+            // Display updated restaurant list
+            Console.WriteLine("\n===== Updated Restaurant List =====");
+
+            foreach (var item in restaurants)
+            {
+                Console.WriteLine(
+                    $"{item.Id}. {item.Name} Type: {item.Type} -- {item.Rate}"
+                );
+            }
+
+            Console.WriteLine($"Total restaurants: {restaurants.Count}");
             Console.WriteLine("Boss");
         }
     }
