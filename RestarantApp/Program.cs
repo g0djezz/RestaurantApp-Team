@@ -29,7 +29,7 @@ namespace RestaurantApp
             Console.WriteLine("samutprakan");
 
             Console.WriteLine("Jessada,Chanachai,Nattawut");
-            Console.WriteLine("Winner");
+            Console.WriteLine("Boss");
 
             Console.WriteLine("Jessada");
             // Menu 5: Add New Restaurant
