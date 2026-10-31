@@ -29,6 +29,8 @@ namespace RestaurantApp
             Console.WriteLine("samutprakan");
             Console.WriteLine("Jessada,Chanachai,Nattawut");
             Console.WriteLine("Winner");
+            Console.WriteLine("Jessada");
+
         }
     }
     public class Restaurant
