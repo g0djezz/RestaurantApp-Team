@@ -28,6 +28,7 @@ namespace RestaurantApp
             Console.WriteLine($"Average rating: {averageRate:F2}");
             Console.WriteLine("samutprakan");
             Console.WriteLine("Jessada,Chanachai,Nattawut");
+            Console.WriteLine("Winner");
         }
     }
     public class Restaurant
