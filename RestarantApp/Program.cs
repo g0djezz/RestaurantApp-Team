@@ -32,7 +32,7 @@ namespace RestaurantApp
             Console.WriteLine("Boss");
 
             Console.WriteLine("Jessada");
-            // Menu 5: Add New Restaurant
+            
             Console.WriteLine("\n===== Menu 5: Add Restaurant =====");
 
             Console.Write("Enter restaurant name: ");
@@ -46,7 +46,7 @@ namespace RestaurantApp
 
             double rate;
 
-            // Check rating
+           
             if (double.TryParse(input, out rate) && rate >= 0 && rate <= 5)
             {
                 int newId = restaurants.Max(r => r.Id) + 1;
@@ -64,7 +64,7 @@ namespace RestaurantApp
                 Console.WriteLine("\nInvalid rating! Please enter 0-5.");
             }
 
-            // Display updated restaurant list
+           
             Console.WriteLine("\n===== Updated Restaurant List =====");
 
             foreach (var item in restaurants)
@@ -72,12 +72,12 @@ namespace RestaurantApp
                 Console.WriteLine(
                     $"{item.Id}. {item.Name} Type: {item.Type} -- {item.Rate}"
                 );
-            } //
+            } 
 
             Console.WriteLine($"Total restaurants: {restaurants.Count}");
             Console.WriteLine("Boss");
 
-            // Feature: Good Rate
+           
             Console.WriteLine("\n===== Restaurants with Rate 4.5+ =====");
 
             var goodRestaurants = restaurants
@@ -89,7 +89,7 @@ namespace RestaurantApp
                 Console.WriteLine($"ID: {r.Id}, Name: {r.Name}, Type: {r.Type}, Rating: {r.Rate}");
             }
 
-            // Feature: Summary
+           
             Console.WriteLine("\n===== Restaurant Summary H&L =====");
 
             double Maxrate = restaurants.Max(r => r.Rate);
