@@ -72,7 +72,7 @@ namespace RestaurantApp
                 Console.WriteLine(
                     $"{item.Id}. {item.Name} Type: {item.Type} -- {item.Rate}"
                 );
-            }
+            } //
 
             Console.WriteLine($"Total restaurants: {restaurants.Count}");
             Console.WriteLine("Boss");
@@ -85,6 +85,29 @@ namespace RestaurantApp
             .ToList();
 
             foreach (var r in goodRestaurants)
+            {
+                Console.WriteLine($"ID: {r.Id}, Name: {r.Name}, Type: {r.Type}, Rating: {r.Rate}");
+            }
+
+            // Feature: Summary
+            Console.WriteLine("\n===== Restaurant Summary H&L =====");
+
+            double Maxrate = restaurants.Max(r => r.Rate);
+
+            var HighestRestaurants = restaurants
+                .Where(r => r.Rate == Maxrate)
+                .ToList();
+
+            foreach (var r in HighestRestaurants)
+            {
+                Console.WriteLine($"ID: {r.Id}, Name: {r.Name}, Type: {r.Type}, Rating: {r.Rate}");
+            }
+
+            double MinRate = restaurants.Min(r => r.Rate);
+            var LowestRestaurants = restaurants
+                .Where(r => r.Rate == MinRate)
+                .ToList();
+            foreach (var r in LowestRestaurants)
             {
                 Console.WriteLine($"ID: {r.Id}, Name: {r.Name}, Type: {r.Type}, Rating: {r.Rate}");
             }
