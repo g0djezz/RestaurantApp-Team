@@ -76,6 +76,18 @@ namespace RestaurantApp
 
             Console.WriteLine($"Total restaurants: {restaurants.Count}");
             Console.WriteLine("Boss");
+
+            // Feature: Good Rating
+            Console.WriteLine("\n===== Restaurants with Rating 4.5+ =====");
+
+            var goodRestaurants = restaurants
+            .Where(r => r.Rate >= 4.5)
+            .ToList();
+
+            foreach (var r in goodRestaurants)
+            {
+                Console.WriteLine($"ID: {r.Id}, Name: {r.Name}, Type: {r.Type}, Rating: {r.Rate}");
+            }
         }
     }
     public class Restaurant
