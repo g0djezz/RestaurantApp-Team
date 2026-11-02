@@ -77,8 +77,8 @@ namespace RestaurantApp
             Console.WriteLine($"Total restaurants: {restaurants.Count}");
             Console.WriteLine("Boss");
 
-            // Feature: Good Rating
-            Console.WriteLine("\n===== Restaurants with Rating 4.5+ =====");
+            // Feature: Good Rate
+            Console.WriteLine("\n===== Restaurants with Rate 4.5+ =====");
 
             var goodRestaurants = restaurants
             .Where(r => r.Rate >= 4.5)
